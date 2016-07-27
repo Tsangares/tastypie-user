@@ -206,6 +206,7 @@ class UserResource(ModelResource):
     class Meta:
         queryset = User.objects.filter()
         resource_name = 'user'
+        always_return_data = True
         detail_allowed_methods = ['get', 'patch', 'put', 'delete']
         list_allowed_methods = ['get', 'post', 'delete', 'patch']
         fields = ['first_name', 'last_name']
