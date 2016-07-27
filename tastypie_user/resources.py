@@ -204,6 +204,7 @@ class UserResource(ModelResource):
         return bundle
 
     class Meta:
+        always_return_data = True
         queryset = User.objects.filter()
         resource_name = 'user'
         detail_allowed_methods = ['get', 'patch', 'put', 'delete']
